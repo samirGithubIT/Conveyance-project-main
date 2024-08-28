@@ -33,7 +33,7 @@ Route::get('/dashboard', function () {
 Route::get('/login', [EmployeeAuthController::class, 'login_form'])->name('login');
 Route::post('/login', [EmployeeAuthController::class, 'login']);     // same route but alada method thakle ek route use kora jai 
 
-// Route::post('employee/logout', [EmployeeAuthController::class, 'logout'])->name('employee.logout');     
+Route::post('employee/logout', [EmployeeAuthController::class, 'logout'])->name('employee.logout');     
 
 Route::middleware('auth')->group(function () {
 
